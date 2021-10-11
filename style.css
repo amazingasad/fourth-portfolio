@@ -33,7 +33,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10000;
+    z-index: 100;
     flex-flow: column;
     padding: 8rem 2rem;
     background: #222;
@@ -86,10 +86,35 @@ header .follow a:hover{
     height: 1rem;
     border-radius: 50%;
     position: absolute;
-    top: 500px;
-    left: 500px;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    background: var(--main-color);
+    transform: translate(-50%, -50%);
+    z-index: 10000;
 }
+.cursor-1.active{
+    height: 6rem;
+    width: 6rem;
+    opacity: .3;
+}
+.cursor-2{
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s linear;
+    z-index: 10000;
 
+}
+.cursor-2.active{
+    display: none;
+}
 
 
 /* media queries */
@@ -109,6 +134,9 @@ header .follow a:hover{
     header.active{
         left: 0%;
     }
+    .cursor-1, .cursor-2{
+        display: none;
+    }
 }
 
 
@@ -119,4 +147,5 @@ header .follow a:hover{
     header{
         width: 100%;
     }
+    
 }
