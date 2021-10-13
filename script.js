@@ -4,9 +4,9 @@ menu.addEventListener("click", function(){
     menu.classList.toggle("fa-times")
     header.classList.toggle("active")
 })
-window.addEventListener("onScroll", function(){
-    menu.classList.toggle("fa-times");
-    header.classList.toggle("active");
+window.addEventListener("scroll", function(){
+    menu.classList.remove("fa-times");
+    header.classList.remove("active");
 })
 let cursor1 = document.querySelector(".cursor-1");
 let cursor2 = document.querySelector(".cursor-2");
